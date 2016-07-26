@@ -21,7 +21,7 @@ class Anagram
     word_a_arr = word_a.scan /\w/
     word_b_arr = word_b.scan /\w/
     xor_arr = word_a_arr + word_b_arr - (word_a_arr & word_b_arr)
-    xor_arr.length > 0 ? false : true
+    !(xor_arr.length > 0)
   end
 
   def find_anagrams_for(input_word)
